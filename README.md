@@ -4,4 +4,4 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 
 ## Solution
 
-[Live]()
+[Live](https://sudhanshusingh-g.github.io/room-homepage/)
