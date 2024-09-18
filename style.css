@@ -15,4 +15,164 @@ body{
     font-size: 12px;
     font-family: 'League Spartan', sans-serif;
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+ul{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
 
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.slider_div{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 70%;
+    
+}
+
+.slide_container{
+    background-image: url('images/desktop-image-hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+nav ul{
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+}
+nav ul li::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    position: relative;
+    top: 4px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+nav ul li:hover::after{
+    transform: scaleX(1);
+}
+.discover_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem;
+    position: relative;
+}
+.discover_text{
+    margin-left: 4rem;
+}
+.discover_text h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.discover_text p{
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    width: 80%;
+    line-height: 1.5;
+}
+.discover_text button{
+    background: none;
+    color: var(--black);
+    padding: 0.4rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 500;
+}
+.discover_text button:hover{
+    color: var(--dark-gray);
+}
+.discover_text button:hover svg{
+    stroke: var(--dark-gray);
+}
+.navigation_container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+.navigation_container button{
+    background: var(--black);
+    width: 100%;
+    padding: 0.8rem 1rem;
+}
+.navigation_container button:hover{
+    background-color: var(--very-dark-gray);
+}
+.arrow_left{
+    width: 0.4rem;
+}
+.arrow_right{
+    width: 0.4rem;
+}
+
+
+
+/* About Section */
+.about_section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 30%;
+}
+.about_product{
+    padding: 3rem;
+}
+.about_text h2{
+        font-size: 1rem;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem
+}
+.about_text p{
+        color: var(--dark-gray);
+    line-height: 1.5;
+}
+
+.product_dark{
+    background-image: url('./images/image-about-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product_light{
+    background-image: url('./images/image-about-light.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
