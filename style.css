@@ -39,6 +39,12 @@ button {
   justify-content: center;
   gap: 0.8rem;
 }
+
+main{
+  display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 header {
   display: flex;
   align-items: center;
@@ -118,6 +124,13 @@ nav {
     color: var(--black);
     letter-spacing: 0.4rem;
     padding: 0.4rem 0;
+    transition: color 0.3s;
+}
+.discover_text button:hover{
+  color: var(--dark-gray);
+}
+.discover_text button:hover svg{
+  stroke: var(--dark-gray);
 }
 
 /* Slide navigation  */
@@ -141,8 +154,53 @@ nav {
 .navigation_container button:hover{
     background: var(--very-dark-gray);
 }
+/* About product */
+.about_product{
+  padding: 2rem 1.4rem;
+}
+.about_text{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.about_text .title{
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.about_text .description{
+  color: var(--dark-gray);
+  line-height: 1.5;
+}
+.image_slide_container img {
+  transition: opacity 0.5s ease-in-out;
+}
 
-@media screen and (min-width: 768px) {
+/* Add transition to the description */
+.discover_text {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+@media screen and (min-width: 980px) {
+  .slider_container{
+    display: flex;
+    height: 60%;
+  }
+  .image_slide_container{
+    width: 60%;
+  }
+  .discover_container{
+    width: 40%;
+  }
     header{
         padding: 4rem;
     }
@@ -183,4 +241,12 @@ nav {
         transform: scaleX(1);
     }
 
+    
+    .about_section{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      height: 40%;
+    }
+
+    
 }
